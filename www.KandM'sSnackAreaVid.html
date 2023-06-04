@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #video-container {
+      width: 18,000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #button-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<font color="white"size="4"face"Arial">CopyrightbyGoogle©</font>
+<h1 align="center"><br></font><b><i><big><font color="E7A75F">"F.o.o.d V.i.d.e.o.s:"</b></i></big>
+<body background="backgroundburgs.jpg">
+    
+  <div id="video-container">
+    <video id="video-player" src="video1.mp4" controls autoplay></video>
+  </div>
+
+  <div id="button-container">
+    <button class="button" onclick="previousVideo()">Previous</button>
+    <button class="button" onclick="nextVideo()">Next</button>
+  </div>
+
+  <br /><br /><br /><br />
+    <hr width="1500px">    
+    <center>    
+    <b>    
+    <font face="cinzel" size="4">    
+        <a href ="#">About Us|     
+        <a href ="#">Contact Us |    
+        <a href ="https://policies.google.com/privacy?hl=en-US"> Privacy Policy |    
+        <a href ="https://support.google.com/legal/answer/3463239?hl=en"> Copyright |     
+        <a href ="https://www.burgerstandrestaurants.com/">Media Info|    
+        <a href ="https://www.burgerstandrestaurants.com/"> Stand (Media Info)|    
+        <a href ="https://burgerstandnm.com/"> Others |    
+        <a href ="https://www.tripadvisor.com.ph/Restaurant_Review-g58517-d5455779-Reviews-Burger_Stand-Hoodsport_Washington.html"> Burgers</a><br/>    
+        <a href ="https://www.youtube.com/results?search_query=cooking+videos">Cookings|    
+        <a href ="https://www.youtube.com/results?search_query=mukbang+burgers"> Mukbang|    
+        <a href ="https://www.youtube.com/@JoshuaWeissman"> Joshua Weissman |    
+        <a href ="https://www.youtube.com/@NickDiGiovanni">Nick Digiovanni |    
+        <a href ="https://www.youtube.com/@gordonramsay"> Gordon Ramsay |    
+        <a href ="https://www.youtube.com/@mrnigelng"> Uncle Roger    
+  <script>
+    var videos = [
+      "ASMR.mp4",
+      "Gordon.mp4",
+      "Nigel.mp4",
+	"WaysCook.mp4",
+	"RateNick.mp4"
+    ];
+    var currentIndex = 0;
+    var videoPlayer = document.getElementById("video-player");
+
+    function previousVideo() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        videoPlayer.src = videos[currentIndex];
+        videoPlayer.play();
+      }
+    }
+
+    function nextVideo() {
+      if (currentIndex < videos.length - 1) {
+        currentIndex++;
+        videoPlayer.src = videos[currentIndex];
+        videoPlayer.play();
+      }
+    }
+  </script>
+</body>
+</html>

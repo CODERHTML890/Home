@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .gallery-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .gallery-arrow.left {
+      left: 10px;
+    }
+
+    .gallery-arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+<body background="backgroundburgs.jpg">
+<font color="white"size="4"face"Arial">CopyrightbyGoogle©</font>
+<h1 align="center"><br></font><b><i><big><font color="#8C755C">"F.o.o.d G.a.l.l.e.r.y:"</b></i></big>
+  <div class="gallery-container">
+    <img class="gallery-image" src="image1.jpg" alt="Image 1">
+    <div class="gallery-arrow left" onclick="navigateGallery(-1)">&lt;</div>
+    <div class="gallery-arrow right" onclick="navigateGallery(1)">&gt;</div>
+  </div>
+<br />
+    <hr width="1500px">    
+    <center>    
+    <b>    
+    <font face="cinzel" size="4">    
+        <a href ="#">About Us|     
+        <a href ="#">Contact Us |    
+        <a href ="https://policies.google.com/privacy?hl=en-US"> Privacy Policy |    
+        <a href ="https://support.google.com/legal/answer/3463239?hl=en"> Copyright |     
+        <a href ="https://www.burgerstandrestaurants.com/">Media Info|    
+        <a href ="https://www.burgerstandrestaurants.com/"> Stand (Media Info)|    
+        <a href ="https://burgerstandnm.com/"> Others |    
+        <a href ="https://www.tripadvisor.com.ph/Restaurant_Review-g58517-d5455779-Reviews-Burger_Stand-Hoodsport_Washington.html"> Burgers</a><br/>    
+        <a href ="https://www.youtube.com/results?search_query=cooking+videos">Cookings|    
+        <a href ="https://www.youtube.com/results?search_query=mukbang+burgers"> Mukbang|    
+        <a href ="https://www.youtube.com/@JoshuaWeissman"> Joshua Weissman |    
+        <a href ="https://www.youtube.com/@NickDiGiovanni">Nick Digiovanni |    
+        <a href ="https://www.youtube.com/@gordonramsay"> Gordon Ramsay |    
+        <a href ="https://www.youtube.com/@mrnigelng"> Uncle Roger    
+  <script>
+    var images = [
+      "pasta3.jpg",
+      "pasta4.jpg",
+      "pizza.jpg",
+      "burgerislife.jpg",
+      "sandwhich.jpg",
+	"pasta5.jpg",
+	"fries.jpg"	
+	
+    ];
+    var currentIndex = 0;
+    var imageElement = document.querySelector(".gallery-image");
+
+    function navigateGallery(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      imageElement.src = images[currentIndex];
+    }
+
+  </script>
+</body>
+</html>
